@@ -16,5 +16,5 @@
 \[1]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627
 \[markdown]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627
 
-[1]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627  
+[1]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627 <br>
 [markdown]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627
