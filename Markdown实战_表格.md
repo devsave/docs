@@ -16,7 +16,7 @@
         |左对齐|居中对齐|右对齐|<br>
         |内容一|内容二|内容三|
         </td>
-        <td>
+        <!--<td>
             &lt;table><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th align="left"&gt;表格表头一&lt;/th&gt;<br>
@@ -34,23 +34,23 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td align="right"&gt;内容三&lt;/td&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
             &lt;/table>
-        </td>
+        </td> -->
         <td>
             <table>
                 <tr>
-                    <th align="left">表格表头一<th>
-                    <th align="center">表格表头二<th>
-                    <th align="right">表格表头三<th>
+                    <th align="left">表格表头一</th>
+                    <th align="center">表格表头二</th>
+                    <th align="right">表格表头三</th>
                 </tr>
                 <tr>
-                    <td align="left">左对齐<td>
-                    <td align="center">居中对齐<td>
-                    <td align="right">右对齐<td>
+                    <td align="left">左对齐</td>
+                    <td align="center">居中对齐</td>
+                    <td align="right">右对齐</td>
                 </tr>
                 <tr>
-                    <td align="left">内容一<td>
-                    <td align="center">内容二<td>
-                    <td align="right">内容三<td>
+                    <td align="left">内容一</td>
+                    <td align="center">内容二</td>
+                    <td align="right">内容三</td>
                 </tr>
             </table>
         </td>
