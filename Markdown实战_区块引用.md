@@ -10,7 +10,7 @@
         <td>
             <p>这是第一个段落</p>
             <p>这是第二个段落</p>
-            <p><strong>&gt;<strong> 这是一个引用段落</p> 
+            <p><strong>&gt;</strong> 这是一个引用段落</p> 
             <p>这是第三个段落</p>
         </td>
         <td>
