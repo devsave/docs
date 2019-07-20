@@ -10,7 +10,7 @@ __\[链接名称]\(链接地址) 或 <链接地址>__
 
 |Markdown写法|渲染效果|
 |:--|:--|
-|\[Markdown实战 - 简介]\[1]__|[Markdown实战 - 简介][1]|
+| __\[Markdown实战 - 简介]\[1]__|[Markdown实战 - 简介][1]|
 |Markdown实战 - 简介 __\[Markdown实战 - 简介]\[markdown]__|[Markdown实战 - 简介][markdown]|
 
 \[1]: https://www.toutiao.com/i6715611694149665293/  
