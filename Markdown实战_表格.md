@@ -16,7 +16,7 @@
         |左对齐|居中对齐|右对齐|<br>
         |内容一|内容二|内容三|
         </td>
-        <!--<td>
+        <td>
             &lt;table><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th align="left"&gt;表格表头一&lt;/th&gt;<br>
@@ -34,7 +34,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td align="right"&gt;内容三&lt;/td&gt;<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
             &lt;/table>
-        </td> -->
+        </td>
         <td>
             <table>
                 <tr>
