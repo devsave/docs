@@ -13,8 +13,5 @@
 |Markdown实战系列 __\[Markdown实战系列]\[1]__|Markdown实战系列[Markdown实战系列][1]|
 |Markdown实战系列 __\[Markdown实战系列]\[markdown]__|Markdown实战系列[Markdown实战系列][markdown]|
 
-\[1]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627
-\[markdown]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627
-
 [1]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627 <br>
 [markdown]: http://mp.toutiao.com/preview_article/?pgc_id=6715676812434735627
