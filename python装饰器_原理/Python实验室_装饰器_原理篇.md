@@ -186,4 +186,75 @@ I am a decorator: After func.
 func = decorate(dec_param)(func)(func_param)
 即，最终我们调用`func('hello')`实际调用的`decorate('I am a decorate')(func)('hello')`的结果。
 
-至此，我们已解开了装饰器的神秘面纱，装饰器借助一个'@'符号隐式实现了上述过程。看起来装饰器的各种情形都已经分析过，是不是我们已经完全掌握了装饰器的秘密？等等，对象也可以表现为函数的行为，装饰器在对象上也可以发挥一技之长，具体内容下一篇文章我们再进行分析。
+#### 装饰器叠加
+经过装饰器的修饰的结果依然是个函数，因此，我们可以进一步对此结果进行修饰，也就是装饰器的叠加使用。
+
+```python
+def decorate1(dec_param1):
+    def wrapper(func):
+        def inner(func_param):
+            print("Decorate 1 start: %s" % dec_param1)
+            result = func(func_param)
+            print("Decorate 1 end: %s" % dec_param1)
+            return result
+        return inner
+    return wrapper
+
+def decorate2(dec_param2):
+    def wrapper(func):
+        def inner(func_param):
+            print("Decorate 2 start: %s" % dec_param2)
+            result = func(func_param)
+            print("Decorate 2 end: %s" % dec_param2)
+            return result
+        return inner
+    return wrapper
+
+@decorate2('hello')
+@decorate1("world")
+def func(func_param):
+    print("Func executed:%s" % func_param)
+
+func('test')
+```
+如果大家前面的知识已经完全掌握，应该能得出这种情况的等效结果，注意越靠近函数的装饰器越早执行，也就是函数func先经过decorate1修饰，再经过decorate2修饰。
+
+等效结果为：
+func = decorate2(dec_param2)(decorate1(dec_param1)(func))
+func('test') => decorate2('hello')(decorate1('world')(func))('test')
+
+运行结果为：  
+Decorate 2 start: hello  
+Decorate 1 start: world  
+Func executed:test  
+Decorate 1 end: world  
+Decorate 2 end: hello  
+
+至此，我们已解开了函数装饰器的神秘面纱，装饰器借助一个'@'符号隐式实现了上述过程。看起来装饰器的各种情形都已经分析过，是不是我们已经完全掌握了装饰器的秘密？等等，对象也可以表现为函数的行为 - 可调用对象，装饰器在对象上也可以发挥一技之长，具体内容下一篇文章我们再进行分析。
+
+P.S.
+
+1. 如果装饰器希望运用在不确定参数个数的函数上，并且不太关注函数参数本身的内容，我们可以定义函数为inner(*args, **kwargs)的形式，对参数进行打包和解包，这样，任何函数都可以被该装饰器修饰。
+2. 调试过程中可能会暴露装饰器替换函数的信息，如果想更好地隐藏此类信息，可以借助于库functools，注意装饰器@wraps必须应用于最后返回的函数上。
+
+    ```python
+    from functools import wraps
+
+    def decorate(dec_param1):
+        def wrapper(func):
+            @wraps(func)
+            def inner(func_param):
+                print("%s Before func." % dec_param1)
+                result = func(func_param)
+                print("%s After func." % dec_param1)
+                return result
+            return inner
+        return wrapper
+
+    @decorate("I am a decorator:")
+    def func(func_param):
+        print("This is func. %s" % func_param)
+
+    func('hello')
+    print(func.__name__)
+    ```
