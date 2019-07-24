@@ -21,7 +21,7 @@ manager1 = Manager()
 manager2 = Manager()
 manager1.who_am_i()
 manager2.who_am_i()
-print(manager1 == manager2)
+print(manager1 is manager2)
 ```
 运行结果：   
 One manager is instantiated.  
@@ -59,7 +59,7 @@ manager1 = Manager()
 manager2 = Manager()
 manager1.who_am_i()
 manager2.who_am_i()
-print(manager1 == manager2)
+print(manager1 is manager2)
 ```
 运行结果：  
 One manager is instantiated.  
