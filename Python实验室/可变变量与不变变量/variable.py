@@ -72,6 +72,19 @@
 # print(a)
 
 
-a = -6
-b = -6
-print( a is b)
+# a = -6
+# b = -6
+# print( a is b)
+
+def append_element1(var):
+    var += [3]
+
+def append_element2(var):
+    var = var + [3]
+
+a = [1, 2]
+b = [1, 2]
+append_element1(a)
+append_element2(b)
+print('a = %s' % str(a))
+print('b = %s' % str(b))
