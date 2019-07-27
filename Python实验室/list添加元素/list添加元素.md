@@ -39,6 +39,7 @@ print('The id of a: %d' % id(a) )
 a += [3]
 print('The id of a: %d' % id(a) )
 print('a = %s' % str(a))
+print()
 
 print('The id of b: %d' % id(b) )
 b = b + [3]
@@ -49,6 +50,7 @@ print('b = %s' % str(b))
 The id of a: 2121104837832  
 The id of a: 2121104837832  
 a = [1, 2, 3]  
+
 The id of b: 2121105443784  
 The id of b: 2121104837704  
 b = [1, 2, 3]  
@@ -64,7 +66,10 @@ c = b
 print('Before calculation')
 print('The id of b: %d' % id(b))
 print('The id of c: %d' % id(c))
+print('b = %s' % str(b))
+print('c = %s' % str(c))
 b = b + [3]
+print()
 print('After calculation')
 print('The id of b: %d' % id(b) )
 print('The id of c: %d' % id(c))
@@ -73,13 +78,16 @@ print('c = %s' % str(c))
 ```
 运行结果：  
 Before calculation  
-The id of b: 2373282385096  
-The id of c: 2373282385096   
+The id of b: 2686853979720  
+The id of c: 2686853979720  
+b = [1, 2]  
+c = [1, 2]  
+
 After calculation  
-The id of b: 2373281327368  
-The id of c: 2373282385096  
+The id of b: 2686853890760  
+The id of c: 2686853979720  
 b = [1, 2, 3]  
-c = [1, 2]   
+c = [1, 2]  
 
 为了能找到b原来所指列表，在运算前，我们定义`c = b`，观察b和c的id可知它们指向同一个列表。
 运算后，b和c的id不再相同，b指向了新的列表并包含了新插入的元素，而c保持不变，可见原列表经过'='和'+'运算后并未被修改。
@@ -94,7 +102,10 @@ c = b
 print('Before calculation')
 print('The id of b: %d' % id(b))
 print('The id of c: %d' % id(c))
+print('b = %s' % str(b))
+print('c = %s' % str(c))
 b += (3, )
+print()
 print('After calculation')
 print('The id of b: %d' % id(b) )
 print('The id of c: %d' % id(c))
@@ -103,11 +114,14 @@ print('c = %s' % str(c))
 ```
 运行结果：  
 Before calculation  
-The id of b: 1723124645128  
-The id of c: 1723124645128  
+The id of b: 2333788437640  
+The id of c: 2333788437640  
+b = (1, 2)  
+c = (1, 2)  
+
 After calculation  
-The id of b: 1723123982624  
-The id of c: 1723124645128  
+The id of b: 2333787775336  
+The id of c: 2333788437640  
 b = (1, 2, 3)  
 c = (1, 2)  
 
